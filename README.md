@@ -6,7 +6,7 @@ The only database driver added is the Postgres one. If you need to use another d
 
 #### Installation
 
-`https://github.com/victorcrbt/typescript-express-boileplate.git`
+`https://github.com/victorcrbt/typescript-express-boilerplate.git`
 
 1. `cd typescript-express-boilerplate`
 2. `yarn` or `npm install`
@@ -66,3 +66,4 @@ If you need more aliases, it's pretty easy to setup them. Just edit the `tsconfi
 ### To be added
 
 - Tests structure
+- Validator
