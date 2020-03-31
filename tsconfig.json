@@ -1,0 +1,29 @@
+{
+  "compilerOptions": {
+    "target": "es6",
+    "esModuleInterop": true,
+    "moduleResolution": "node",
+    "module": "commonjs",
+    "lib": ["ES6"],
+
+    "baseUrl": "src",
+
+    "outDir": "./build",
+    "paths": {
+      "app/*": ["./app/*"],
+      "models/*": ["./app/models/*"],
+      "controllers/*": ["./app/controllers/*"]
+    },
+    "plugins": [
+      { "transform": "typescript-transform-paths" },
+      { "transform": "typescript-transform-paths", "afterDeclarations": true }
+    ],
+
+    "typeRoots": ["./node_modules/@types", "./typings"],
+
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true
+  },
+  "include": ["src/**/*"],
+  "exclude": ["node_modules"]
+}
