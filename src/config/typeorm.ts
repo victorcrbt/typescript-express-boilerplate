@@ -1,3 +1,4 @@
+import '../bootstrap';
 import { ConnectionOptions } from 'typeorm';
 import { resolve } from 'path';
 
@@ -8,8 +9,8 @@ const config: ConnectionOptions = {
   username: process.env.SQL_USER,
   password: process.env.SQL_PASS,
   database: process.env.SQL_DB_NAME,
-  synchronize: false,
-  entities: [resolve(__dirname, '..', 'app', 'models', '*')],
+  synchronize: process.env.NODE_ENV === 'test',
+  entities: [resolve(__dirname, '..', 'app', 'models', '**', '*.{ts,js}')],
 };
 
 export default config;
