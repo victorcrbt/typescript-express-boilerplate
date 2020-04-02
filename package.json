@@ -11,7 +11,7 @@
     "migration:run": "ts-node ./node_modules/typeorm/cli migration:run",
     "migration:revert": "ts-node ./node_modules/typeorm/cli migration:revert",
     "pretest": "DOTENV_CONFIG_PATH=./.env.test ts-node -r dotenv/config ./node_modules/typeorm/cli migration:run",
-    "test": "jest --runInBand",
+    "test": "jest --runInBand --forceExit",
     "posttest": "DOTENV_CONFIG_PATH=./.env.test ts-node -r dotenv/config ./node_modules/typeorm/cli migration:revert"
   },
   "dependencies": {
