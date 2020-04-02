@@ -7,6 +7,7 @@ module.exports = {
   env: {
     es6: true,
     node: true,
+    jest: true,
   },
   extends: [
     'plugin:@typescript-eslint/recommended',
@@ -48,7 +49,7 @@ module.exports = {
     ],
     'import/no-extraneous-dependencies': [
       'error',
-      { devDependencies: ['**/*.test.ts'] },
+      { devDependencies: ['**/*.test.ts', '*/factories/*.ts'] },
     ],
     'import/prefer-default-export': 'off',
     indent: 'off',
