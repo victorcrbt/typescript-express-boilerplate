@@ -1,6 +1,11 @@
+# Folders
 build/
 node_modules/
-__tests__/coverage/
 
+# Tests
+__tests__/coverage/
+__tests__/database.sqlite
+
+# Misc
 .env
 yarn-error.log
