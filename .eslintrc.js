@@ -38,6 +38,7 @@ module.exports = {
     camelcase: 'off',
     'comma-dangle': 'off',
     'class-methods-use-this': 'off',
+    'object-curly-newline': 'off',
     'lines-between-class-members': 'off',
     'implicit-arrow-linebreak': 'off',
     'import/extensions': [
@@ -56,6 +57,7 @@ module.exports = {
     'max-classes-per-file': 'off',
     'no-param-reassign': 'off',
     'no-unused-vars': 'off',
+    'operator-linebreak': 'off',
     strict: 'off',
   },
   settings: {
