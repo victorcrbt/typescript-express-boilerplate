@@ -10,7 +10,9 @@
     "build": "yarn ttsc",
     "migration:run": "ts-node ./node_modules/typeorm/cli migration:run",
     "migration:revert": "ts-node ./node_modules/typeorm/cli migration:revert",
-    "test": "jest"
+    "pretest": "DOTENV_CONFIG_PATH=./.env.test ts-node -r dotenv/config ./node_modules/typeorm/cli migration:run",
+    "test": "jest",
+    "posttest": "DOTENV_CONFIG_PATH=./.env.test ts-node -r dotenv/config ./node_modules/typeorm/cli migration:revert"
   },
   "dependencies": {
     "cors": "^2.8.5",
@@ -39,6 +41,7 @@
     "jest": "^25.2.4",
     "jest-extended": "^0.11.5",
     "prettier": "^2.0.2",
+    "sqlite3": "^4.1.1",
     "ts-jest": "^25.3.0",
     "ts-node": "^8.8.1",
     "ts-node-dev": "^1.0.0-pre.44",
