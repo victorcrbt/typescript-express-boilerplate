@@ -1,9 +1,9 @@
 import { Router } from 'express';
 
-import TestController from 'controllers/TestController';
+import UserController from 'controllers/UserController';
 
 const routes = Router();
 
-routes.get('/', TestController.index);
+routes.post('/users', UserController.store);
 
 export default routes;
