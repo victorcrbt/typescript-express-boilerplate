@@ -10,9 +10,11 @@
 
     "outDir": "./build",
     "paths": {
+      "src/*": ["*"],
       "app/*": ["./app/*"],
       "models/*": ["./app/models/*"],
-      "controllers/*": ["./app/controllers/*"]
+      "controllers/*": ["./app/controllers/*"],
+      "services/*": ["./app/services/*"]
     },
     "plugins": [
       { "transform": "typescript-transform-paths" },
@@ -22,7 +24,8 @@
     "typeRoots": ["./node_modules/@types", "./typings"],
 
     "emitDecoratorMetadata": true,
-    "experimentalDecorators": true
+    "experimentalDecorators": true,
+    "types": ["jest"]
   },
   "include": ["src/**/*"],
   "exclude": ["node_modules"]
