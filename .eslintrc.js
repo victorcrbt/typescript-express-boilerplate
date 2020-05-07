@@ -31,7 +31,12 @@ module.exports = {
     '@typescript-eslint/camelcase': 'off',
     '@typescript-eslint/explicit-function-return-type': 'off',
     '@typescript-eslint/no-explicit-any': 'off',
-    '@typescript-eslint/no-unused-vars': 'warn',
+    '@typescript-eslint/no-unused-vars': [
+      'warn',
+      {
+        argsIgnorePattern: '_',
+      },
+    ],
     '@typescript-eslint/no-var-requires': 'off',
     'prettier/prettier': 'error',
     'arrow-parens': 'off',
@@ -55,6 +60,7 @@ module.exports = {
     'import/prefer-default-export': 'off',
     indent: 'off',
     'max-classes-per-file': 'off',
+    'no-console': ['warn', { allow: ['error'] }],
     'no-param-reassign': 'off',
     'no-unused-vars': 'off',
     'operator-linebreak': 'off',
