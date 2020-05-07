@@ -7,9 +7,8 @@
   "private": true,
   "scripts": {
     "dev": "ts-node-dev -r tsconfig-paths/register --respawn --transpileOnly ./src/server",
-    "build": "yarn ttsc",
-    "migration:run": "ts-node ./node_modules/typeorm/cli migration:run",
-    "migration:revert": "ts-node ./node_modules/typeorm/cli migration:revert",
+    "build": "yarn ttsc -p tsconfig.build.json",
+    "typeorm": "ts-node ./node_modules/typeorm/cli.js",
     "pretest": "DOTENV_CONFIG_PATH=./.env.test ts-node -r dotenv/config ./node_modules/typeorm/cli migration:run",
     "test": "jest --runInBand --forceExit",
     "posttest": "DOTENV_CONFIG_PATH=./.env.test ts-node -r dotenv/config ./node_modules/typeorm/cli migration:revert"
