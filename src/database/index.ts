@@ -11,6 +11,8 @@ class Database {
   }
 
   async init(): Promise<void> {
+    if (process.env.NODE_ENV === 'test') return;
+
     this.connection = await createConnection(config);
   }
 }
