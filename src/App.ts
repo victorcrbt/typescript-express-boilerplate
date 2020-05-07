@@ -1,10 +1,12 @@
 import './bootstrap';
 import express from 'express';
 import cors from 'cors';
+import 'express-async-errors';
 
 import './database';
 
 import routes from './routes';
+import globalExceptionHandler from './error/globalExceptionHandler';
 
 class App {
   public server: express.Application;
@@ -23,6 +25,7 @@ class App {
 
   private routes(): void {
     this.server.use(routes);
+    this.server.use(globalExceptionHandler);
   }
 }
 
